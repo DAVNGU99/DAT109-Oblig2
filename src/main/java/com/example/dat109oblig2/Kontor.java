@@ -18,6 +18,7 @@ public class Kontor {
 		this.poststed = poststed;
 		this.biler = biler;
 	}
+	
 	public List<Bil> getBiler() {
 		return biler;
 	}
