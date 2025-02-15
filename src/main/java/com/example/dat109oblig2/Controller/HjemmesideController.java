@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Hjemmeside {
+public class HjemmesideController {
 
 
-    @GetMapping("/hjemmeside")
+    @GetMapping("/")
     public String hjemmeside(){
 
         return "hjemmeside";
@@ -15,10 +15,6 @@ public class Hjemmeside {
     }
 
 
-    @GetMapping("/skjema")
-    public String skjema(){
-        return "skjema";
-    }
 
 
 }

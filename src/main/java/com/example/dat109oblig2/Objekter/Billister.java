@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Billister {
 
-	static List<Bil> biler1 = List.of(
+	static List<Bil> osloBiler = List.of(
             new Bil("Model S", "Tesla", Utleiegruppe.A, "Red", "REG1234", 5000, true),
             new Bil("Model 3", "Tesla", Utleiegruppe.B, "Blue", "REG1235", 3000, true),
             new Bil("Accord", "Honda", Utleiegruppe.C, "Black", "REG1236", 7000, false),
@@ -12,7 +12,7 @@ public class Billister {
             new Bil("Model X", "Tesla", Utleiegruppe.A, "Silver", "REG1238", 1500, false)
     );
 	
-	static List<Bil> biler2 = List.of(
+	static List<Bil> bergenBiler = List.of(
             new Bil("Model Y", "Tesla", Utleiegruppe.B, "Green", "REG1241", 2000, true),
             new Bil("Camry", "Toyota", Utleiegruppe.C, "Blue", "REG1242", 8000, false),
             new Bil("Corolla", "Toyota", Utleiegruppe.D, "Red", "REG1243", 6000, true),
@@ -21,7 +21,7 @@ public class Billister {
             new Bil("Explorer", "Ford", Utleiegruppe.C, "Silver", "REG1246", 4800, true)
     );
 
-    static List<Bil> biler3 = List.of(
+    static List<Bil> haugesundBiler = List.of(
             new Bil("Model 3", "Tesla", Utleiegruppe.A, "Blue", "REG1251", 2300, true),
             new Bil("Camry", "Toyota", Utleiegruppe.B, "Black", "REG1252", 7600, true),
             new Bil("Q5", "Audi", Utleiegruppe.C, "White", "REG1253", 6200, false),
@@ -29,7 +29,7 @@ public class Billister {
             new Bil("X5", "BMW", Utleiegruppe.A, "Green", "REG1255", 3800, false)
     );
 
-    static List<Bil> biler4 = List.of(
+    static List<Bil> kristiansandBiler = List.of(
             new Bil("Model X", "Tesla", Utleiegruppe.A, "Red", "REG1261", 6900, true),
             new Bil("Q7", "Audi", Utleiegruppe.B, "Blue", "REG1262", 8100, false),
             new Bil("Civic", "Honda", Utleiegruppe.C, "Black", "REG1263", 9200, true),
@@ -39,7 +39,7 @@ public class Billister {
             new Bil("5 Series", "BMW", Utleiegruppe.C, "Red", "REG1267", 6800, false)
     );
 
-    static List<Bil> biler5 = List.of(
+    static List<Bil> stavangerBiler = List.of(
             new Bil("Model S", "Tesla", Utleiegruppe.A, "White", "REG1271", 5400, true),
             new Bil("X6", "BMW", Utleiegruppe.B, "Silver", "REG1272", 2900, false),
             new Bil("Q3", "Audi", Utleiegruppe.C, "Green", "REG1273", 6300, true),

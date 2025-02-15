@@ -20,4 +20,6 @@ h1 .first-word{
     color : var(--primary);
 }
 
-
+#kontorLokasjonKnapper{
+    margin: 5px;
+}

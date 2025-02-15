@@ -53,7 +53,7 @@
             <br>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Bestill en bil nå!</button>
+               <a href="skjema"> <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Bestill en bil nå!</button></a>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">Se utvalget</button>
             </div>
 

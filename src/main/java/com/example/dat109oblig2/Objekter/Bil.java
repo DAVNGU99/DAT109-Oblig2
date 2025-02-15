@@ -45,10 +45,11 @@ public class Bil {
 	public void setKm(double km) {
 		this.km = km;
 	}
-	public Boolean getTilgjengelighet() {
+
+	public Boolean getTilgjengelig() {
 		return tilgjengelig;
 	}
-	public void setTilgjengelighet(Boolean tilgjengelighet) {
+	public void setTilgjengelig(Boolean tilgjengelighet) {
 		this.tilgjengelig = tilgjengelighet;
 	}
 	
