@@ -15,5 +15,10 @@ public class Hjemmeside {
     }
 
 
+    @GetMapping("/skjema")
+    public String skjema(){
+        return "skjema";
+    }
+
 
 }
