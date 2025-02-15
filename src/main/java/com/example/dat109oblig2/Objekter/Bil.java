@@ -8,7 +8,17 @@ public class Bil {
 	private String regnr;
 	private double km;
 	private Boolean tilgjengelig;
-	
+
+	private String bildeURL;
+
+	public String getBildeURL() {
+		return bildeURL;
+	}
+
+	public void setBildeURL(String bildeURL) {
+		this.bildeURL = bildeURL;
+	}
+
 	public String getModell() {
 		return modell;
 	}
@@ -52,18 +62,16 @@ public class Bil {
 	public void setTilgjengelig(Boolean tilgjengelighet) {
 		this.tilgjengelig = tilgjengelighet;
 	}
-	
-	public Bil(String modell, String merke, Utleiegruppe utleiegruppe, String farge, String regnr, double km,
-			Boolean tilgjengelighet) {
-		super();
+
+
+	public Bil(String modell, String merke, Utleiegruppe utleiegruppe, String farge, String regnr, double km, Boolean tilgjengelig, String bildeURL) {
 		this.modell = modell;
 		this.merke = merke;
 		this.utleiegruppe = utleiegruppe;
 		this.farge = farge;
 		this.regnr = regnr;
 		this.km = km;
-		this.tilgjengelig = true;
+		this.tilgjengelig = tilgjengelig;
+		this.bildeURL = bildeURL;
 	}
-	
-	
 }

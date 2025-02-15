@@ -31,9 +31,9 @@ public class VelgKontorOgBilController {
 
         if (valgtKontor != null) {
             model.addAttribute("biler", valgtKontor.getBiler());
-            return "biler-fragment"; // Returner JSP-fragment for biler
+            return "listeAvBiler";
         } else {
-            return "feilmelding"; // Returner en feilmelding hvis kontoret ikke finnes
+            return "feilmelding";
         }
     }
 

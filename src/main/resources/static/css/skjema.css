@@ -15,4 +15,9 @@ body{
 .navbar-brand img {
     height: 40px;
 }
+.bilContainer {
+    margin: 20px auto;
+    max-width: 1200px; /* Juster bredden etter behov */
+    padding: 20px;
+}
 
