@@ -1,13 +1,19 @@
-package com.example.dat109oblig2;
+package com.example.dat109oblig2.Objekter;
 
 public class Kunde {
 
 	private String fornavn;
+
 	private String etternavn;
+
 	private String telefonnummer;
+
 	private String addresse;
+
 	private int postnummer;
+
 	private String poststed;
+
 	public String getFornavn() {
 		return fornavn;
 	}

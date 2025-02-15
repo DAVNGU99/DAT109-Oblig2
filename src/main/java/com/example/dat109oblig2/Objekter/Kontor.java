@@ -1,4 +1,4 @@
-package com.example.dat109oblig2;
+package com.example.dat109oblig2.Objekter;
 
 import java.util.List;
 
