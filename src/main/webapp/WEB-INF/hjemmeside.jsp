@@ -26,14 +26,15 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Hjem</a>
+                    <a class="nav-link active" aria-current="page" href="/">Hjem</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="skjema">Bestill</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-disabled="true">Om Sequence</a>
+                    <a class="nav-link active"  href="priser" aria-disabled="true">Priser</a>
                 </li>
+
             </ul>
         </div>
     </div>

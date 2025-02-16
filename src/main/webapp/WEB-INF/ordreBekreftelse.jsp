@@ -45,7 +45,7 @@
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
-      <img src="${bil.bildeURL}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      <img src="${bil.bildeURL}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" object- width="900" height="700" loading="lazy">
     </div>
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><span class="first-word">Takk for at du valgte oss!</span>

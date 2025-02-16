@@ -1,0 +1,191 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<html>
+<head>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8"/>
+  <!--   <script src="js/myscript.js" defer></script> -->
+  <title>Sequence</title>
+  <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/sekvensLogo.png">
+</head>
+
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+  </symbol>
+</svg>
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" height="30px">
+        <span class="fs-4">Sequence</span>
+      </a>
+
+
+
+
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Våre priser</h1>
+      <p class="fs-5 text-body-secondary">I sekvens tilbyr vi fire prisgrupper for dagspass i hver kategori, tilpasset ulike behov og budsjett. Fra enkle løsninger for enkeltpersoner til omfattende tilbud for bedrifter og grupper, finner du det som passer best. Vårt mål er å gi deg fleksibilitet og valgmuligheter, slik at du enkelt kan sammenligne og velge den løsningen som gir mest verdi. Enten du ønsker en grunnleggende dagspass eller en avansert pakke, har vi noe for deg.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="row row-cols-1 row-cols-md-4 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm h-100">
+          <div class="card-header py-3">
+            <bold><h4 class="my-0 fw-normal">Utleiegruppe A</h4></bold>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Kategori A er perfekt for bybilen – liten, praktisk og økonomisk, ideell for daglig bruk i byen.</li> <br><br><br>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">fra kr 400/dag</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm h-100">
+          <div class="card-header py-3">
+            <bold><h4 class="my-0 fw-normal">Utleiegruppe B</h4></bold>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Kategori B passer for en litt større kompakt bil, som gir deg mer plass og fleksibilitet uten å ofre effektivitet. </li> <br><br><br>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">fra kr 600/dag</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm h-100">
+          <div class="card-header py-3">
+            <bold><h4 class="my-0 fw-normal">Utleiegruppe C</h4></bold>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Kategori C er laget for varebiler, hvis du trenger å flytte større gjenstander eller ha ekstra lastekapasitet. </li> <br><br><br>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">fra kr 800/dag</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm h-100 border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <bold><h4 class="my-0 fw-normal">Utleiegruppe D</h4></bold>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Kategori D, vår største løsning, er for selskaper eller kunder som trenger maksimal plass og kapasitet – perfekt for store laster eller team som jobber sammen.</li> <br>
+
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">fra kr 1000/dag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <h2 class="display-6 text-center mb-4">Fordeler</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+        <tr>
+          <th style="width: 34%;"></th>
+          <th style="width: 22%;">Utleiegruppe B</th>
+          <th style="width: 22%;">Utleiegruppe C</th>
+          <th style="width: 22%;">Utleiegruppe D</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row" class="text-start">Forsikring</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Returgebyr</th>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+        </tr>
+        </tbody>
+
+        <tbody>
+        <tr>
+          <th scope="row" class="text-start">Gratis lading</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Gratis tollavgift </th>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Ekstra sikkerhet</th>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2025 Sequence, AS</p>
+
+      <a  class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" alt="" height="50px">
+      </a>
+
+
+    </footer>
+  </div>
+</div>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

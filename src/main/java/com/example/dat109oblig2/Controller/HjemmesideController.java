@@ -15,6 +15,14 @@ public class HjemmesideController {
     }
 
 
+    @GetMapping("/priser")
+    public String priser(){
+
+        return "priser";
+
+    }
+
+
 
 
 }

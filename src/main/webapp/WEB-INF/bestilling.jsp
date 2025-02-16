@@ -26,7 +26,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" alt="sekvensLogo" height="15x"> Sequence
+            <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" alt="Logo">
+            Sequence
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,8 +41,9 @@
                     <a class="nav-link active" href="skjema">Bestill</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-disabled="true">Om Sequence</a>
+                    <a class="nav-link active"  href="priser" aria-disabled="true">Priser</a>
                 </li>
+
             </ul>
         </div>
     </div>
@@ -71,7 +73,7 @@
                             <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 150px; object-fit: scale-down;">
                             <small class="text-body-secondary">Antall km: ${bil.km}</small>
                         </div>
-                        <span class="text-body-secondary">Dagspris: 399kr</span>
+                        <span class="text-body-secondary">Dagspris: ${dagspris} kr</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-sm">
                         <div>
@@ -89,7 +91,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Totalt: </span>
-                        <strong>22</strong>
+                        <strong>${dagspris + 80 + 120}kr</strong>
                     </li>
                 </ul>
             </div>

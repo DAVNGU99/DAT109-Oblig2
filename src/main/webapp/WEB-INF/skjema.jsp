@@ -35,16 +35,16 @@
                     <a class="nav-link active" aria-current="page" href="/">Hjem</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Priser</a>
+                    <a class="nav-link active" href="skjema">Bestill</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-disabled="true">Om Sequence</a>
+                    <a class="nav-link active"  href="priser" aria-disabled="true">Priser</a>
                 </li>
+
             </ul>
         </div>
     </div>
 </nav>
-
 
 <main>
 

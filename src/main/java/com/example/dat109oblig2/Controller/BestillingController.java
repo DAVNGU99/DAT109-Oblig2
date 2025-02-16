@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -31,6 +32,9 @@ public class BestillingController {
                 .filter(bil -> bil.getRegnr().equalsIgnoreCase(bilId))
                 .findFirst()
                 .orElse(null);
+
+        BigDecimal dagspris = valgtBil.getUtleiegruppe().dagsPris();
+        model.addAttribute("dagspris", dagspris);
 
 
         model.addAttribute("bil", valgtBil);
@@ -103,6 +107,8 @@ public class BestillingController {
                 .filter(bil -> bil.getRegnr().equalsIgnoreCase(regnr))
                 .findFirst()
                 .orElse(null);
+
+
 
 
         model.addAttribute("bestilling", bestilling);
