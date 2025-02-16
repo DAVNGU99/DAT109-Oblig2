@@ -4,15 +4,15 @@ import java.time.LocalDate;
 
 public class Utleiebestilling {
 
-	private String kredditkort;
+	private String kredittkort;
 	private String regnr;
 	private LocalDate utleieDato;
 	private LocalDate returDato;
-	public String getKredditkort() {
-		return kredditkort;
+	public String getKredittkort() {
+		return kredittkort;
 	}
-	public void setKredditkort(String kredditkort) {
-		this.kredditkort = kredditkort;
+	public void setKredittkort(String kredittkort) {
+		this.kredittkort = kredittkort;
 	}
 	public String getRegnr() {
 		return regnr;
@@ -32,9 +32,9 @@ public class Utleiebestilling {
 	public void setReturDato(LocalDate returDato) {
 		this.returDato = returDato;
 	}
-	public Utleiebestilling(String kredditkort, String regnr, LocalDate utleieDato, LocalDate returDato) {
+	public Utleiebestilling(String kredittkort, String regnr, LocalDate utleieDato, LocalDate returDato) {
 		super();
-		this.kredditkort = kredditkort;
+		this.kredittkort = kredittkort;
 		this.regnr = regnr;
 		this.utleieDato = utleieDato;
 		this.returDato = returDato;

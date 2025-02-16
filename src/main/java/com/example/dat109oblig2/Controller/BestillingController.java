@@ -40,14 +40,27 @@ public class BestillingController {
 
     @PostMapping("/bestilling")
     public String lagreBestilling(
-            @RequestParam("cc-nummer") String kredittkort,
+
+            //bestillingsdel
+            @RequestParam("kredittkort") String kredittkort,
             @RequestParam("regnr") String regnr,
             @RequestParam("utleieDato") String utleieDato,
             @RequestParam("returDato") String returDato,
+
+            //kundedel
             @RequestParam("fornavn") String fornavn,
             @RequestParam("etternavn") String etternavn,
             @RequestParam("telefonnummer") String telefonnummer,
             @RequestParam("adresse") String adresse,
+            @RequestParam("poststed") String poststed,
+            @RequestParam("postnummer") String postnummer,
+
+            //Bil
+
+
+
+
+
 
 
 
@@ -61,6 +74,8 @@ public class BestillingController {
         lagreKunde.setEtternavn(etternavn);
         lagreKunde.setTelefonnummer(telefonnummer);
         lagreKunde.setAddresse(adresse);
+        lagreKunde.setPoststed(poststed);
+        lagreKunde.setPostnummer(Integer.parseInt(postnummer));
 
         RegistrertKundeListe.kundeinformasjon.add(lagreKunde);
 
@@ -68,14 +83,31 @@ public class BestillingController {
 
         Utleiebestilling bestilling = new Utleiebestilling();
 
-        bestilling.setKredditkort(kredittkort);
+        bestilling.setKredittkort(kredittkort);
         bestilling.setRegnr(regnr);
         bestilling.setUtleieDato(LocalDate.parse(utleieDato));
         bestilling.setReturDato(LocalDate.parse(returDato));
 
         UtleieBestillingsListe.bestilling.add(bestilling);
 
+        List<Bil> alleBiler = List.of(
+                Billister.osloBiler,
+                Billister.bergenBiler,
+                Billister.haugesundBiler,
+                Billister.kristiansandBiler,
+                Billister.stavangerBiler
+        ).stream().flatMap(List::stream).toList();
+
+
+        Bil valgtBil = alleBiler.stream()
+                .filter(bil -> bil.getRegnr().equalsIgnoreCase(regnr))
+                .findFirst()
+                .orElse(null);
+
+
         model.addAttribute("bestilling", bestilling);
+        model.addAttribute("bil", valgtBil);
+        model.addAttribute("kunde", lagreKunde);
 
         return "ordreBekreftelse";
 

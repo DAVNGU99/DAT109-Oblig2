@@ -94,11 +94,11 @@
                 </ul>
             </div>
             <div class="col-md-7 col-lg-8">
-                <form class="needs-validation" novalidate="">
+                <form class="needs-validation" novalidate="" method="post"  action="/bestilling">
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">Fornavn</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                            <input type="text" class="form-control" name="fornavn" id="firstName" placeholder="" value="" required="">
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -106,7 +106,7 @@
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Etternavn</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                            <input type="text" class="form-control" id="lastName" name="etternavn" placeholder="" value="" required="">
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
@@ -114,7 +114,7 @@
 
                         <div class="col-12">
                             <label for="email" class="form-label">Telefonnummer <span class="text-body-secondary"></span></label>
-                            <input type="email" class="form-control" id="email" placeholder="">
+                            <input type="email" name="telefonnummer" class="form-control" id="email" placeholder="">
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
@@ -122,7 +122,7 @@
 
                         <div class="col-12">
                             <label for="address" class="form-label">Adresse</label>
-                            <input type="text" class="form-control" id="address" placeholder="" required="">
+                            <input type="text" name="adresse" class="form-control" id="address" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -130,7 +130,7 @@
 
                         <div class="col-md-4">
                             <label for="poststed" class="form-label">Poststed</label>
-                            <input type="text" class="form-control" id="poststed" placeholder="" required="">
+                            <input type="text" name="poststed" class="form-control" id="poststed" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid state.
                             </div>
@@ -138,7 +138,7 @@
 
                         <div class="col-md-3">
                             <label for="postnummer" class="form-label">Postnummer</label>
-                            <input type="text" class="form-control" id="postnummer" placeholder="" required="">
+                            <input type="text" class="form-control" name="postnummer" id="postnummer" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>
@@ -168,9 +168,9 @@
                     </select>
 
                     <p>Leiedato</p>
-                    <input type="date" />
+                    <input type="date" name="utleieDato" />
                     <p>Returdato</p>
-                    <input type="date"  />
+                    <input type="date" name="returDato"  />
 
 
 
@@ -192,7 +192,7 @@
                     <div class="row gy-3">
                         <div class="col-md-6">
                             <label for="cc-name" class="form-label">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                            <input type="text" class="form-control" id="cc-name"  placeholder="" required="">
                             <small class="text-body-secondary">Full name as displayed on card</small>
                             <div class="invalid-feedback">
                                 Name on card is required
@@ -201,7 +201,7 @@
 
                         <div class="col-md-6">
                             <label for="cc-number" class="form-label">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                            <input type="text" class="form-control" name="kredittkort" id="cc-number" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Credit card number is required
                             </div>
@@ -226,7 +226,9 @@
 
                     <hr class="my-4">
 
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">Fullfør bestilling</button>
+                    <input type="hidden" name="regnr" value="${bil.regnr}">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Fullfør bestillingen</button>
                 </form>
             </div>
         </div>
