@@ -60,5 +60,9 @@ public class Kunde {
 		this.postnummer = postnummer;
 		this.poststed = poststed;
 	}
+
+	public Kunde(){
+
+	}
 	
 }

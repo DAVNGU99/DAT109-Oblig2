@@ -39,6 +39,9 @@ public class Utleiebestilling {
 		this.utleieDato = utleieDato;
 		this.returDato = returDato;
 	}
-	
+
+	public Utleiebestilling(){
+
+	}
 	
 }

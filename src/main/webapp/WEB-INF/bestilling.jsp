@@ -147,6 +147,26 @@
 
                     <hr class="my-4">
 
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Vennligst velg hvor du skal hente leiebilen din</option>
+                        <option value="1">Oslo</option>
+                        <option value="2">Bergen</option>
+                        <option value="3">Stavanger</option>
+                        <option value="4">Kristiansand</option>
+                        <option value="5">Haugesund</option>
+                    </select>
+
+                    <br>
+
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Vennligst velg hvor du skal levere av leiebilen din</option>
+                        <option value="1">Oslo</option>
+                        <option value="2">Bergen</option>
+                        <option value="3">Stavanger</option>
+                        <option value="4">Kristiansand</option>
+                        <option value="5">Haugesund</option>
+                    </select>
+
                     <p>Leiedato</p>
                     <input type="date" />
                     <p>Returdato</p>
@@ -212,9 +232,7 @@
         </div>
     </main>
 
-    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
-        <p class="mb-1">© 2025 Sequence</p>
-    </footer>
+
 </div>
 
 <div class="container">
