@@ -9,13 +9,14 @@
     <meta charset="UTF-8"/>
     <!--   <script src="js/myscript.js" defer></script> -->
     <title>Sequence</title>
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/sekvensLogo.png">
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" alt="Logo">
             Sequence
         </a>
@@ -28,7 +29,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Hjem</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Priser</a>
+                    <a class="nav-link active" href="">Priser</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-disabled="true">Om Sequence</a>
@@ -54,7 +55,6 @@
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                <a href="skjema"> <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Bestill en bil nå!</button></a>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Se utvalget</button>
             </div>
 
 

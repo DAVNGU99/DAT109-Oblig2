@@ -9,6 +9,7 @@
     <meta charset="UTF-8"/>
     <!--   <script src="js/myscript.js" defer></script> -->
     <title>Bestill bil</title>
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/images/sekvensLogo.png">
 
 
 
@@ -17,9 +18,11 @@
 
 <body>
 
+
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="${pageContext.request.contextPath}/images/sekvensLogo.png" alt="Logo">
             Sequence
         </a>
@@ -29,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Hjem</a>
+                    <a class="nav-link active" aria-current="page" href="/">Hjem</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Priser</a>
@@ -73,11 +76,13 @@
 
 
 
-        <div id="biler-container" class="mt-8 row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"></div>
+        <div id="biler-container" class="mt-8 row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 kontainer"></div>
 
 
     </div>
 
+
+    <!-- dette her er pure chatgpt as, too hard  😭😭-->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

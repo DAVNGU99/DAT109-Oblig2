@@ -3,31 +3,29 @@
 
 <c:forEach var="bil" items="${biler}">
     <div class="col">
-
-
-        <div class="card shadow-sm">
-
-<!-- Legge til bilbilder -->
-
-            <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 225px; object-fit: cover;">
+        <div class="card shadow-sm bilKort">
+            <!-- Legge til bilder -->
+            <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 350px; object-fit: cover;">
             <div class="card-body">
                 <p class="card-text">
-
-
-
-<!-- Bootstrap kort template -->
-            <div class="card-body">
-                <p class="card-text">
-                    <strong>Regnr:</strong> ${bil.regnr}<br>
-                    <strong>Farge:</strong> ${bil.farge}<br>
+                    <strong>Merke:</strong> ${bil.merke}<br>
+                    <strong>Modell:</strong> ${bil.modell}<br>
                     <strong>Utleiegruppe:</strong> ${bil.utleiegruppe}<br>
                     <strong>Tilgjengelig:</strong> ${bil.tilgjengelig ? 'Ja' : 'Nei'}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <c:if test="${bil.tilgjengelig}">
-                            <a href="/reserver?bilId=${bil.regnr}" class="btn btn-sm btn-outline-secondary">Reserver</a>
-                        </c:if>
+                        <c:choose>
+                            <c:when test="${bil.tilgjengelig}">
+
+                                <a href="${pageContext.request.contextPath}/bestilling?bilId=${bil.regnr}"
+                                   class="btn btn-sm btn-primary">Reserver</a>
+                            </c:when>
+                            <c:otherwise>
+
+                                <button class="btn btn-sm btn-secondary" disabled>Utilgjengelig</button>
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                     <small class="text-body-secondary">${bil.km} km</small>
                 </div>
