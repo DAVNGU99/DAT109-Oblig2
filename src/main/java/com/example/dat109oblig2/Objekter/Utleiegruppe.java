@@ -10,16 +10,16 @@ public enum Utleiegruppe {
 
         switch (this) {
             case A:
-                pris = new BigDecimal(500);
+                pris = new BigDecimal(400);
                 break;
             case B:
-                pris = new BigDecimal(800);
+                pris = new BigDecimal(600);
                 break;
             case C:
-                pris = new BigDecimal(1200);
+                pris = new BigDecimal(800);
                 break;
             case D:
-                pris = new BigDecimal(1800);
+                pris = new BigDecimal(1000);
                 break;
         }
         return pris;
