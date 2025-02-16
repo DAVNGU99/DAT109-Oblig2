@@ -1,3 +1,4 @@
+<%@ page import="com.example.dat109oblig2.Objekter.Utleiegruppe" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -5,6 +6,10 @@
     String bilId = request.getParameter("bilId");
     String kontorId = request.getParameter("kontorId");
 %>
+
+
+
+
 
 <html>
 <head>
@@ -61,16 +66,30 @@
                             <h6 class="my-0">Merke: ${bil.merke}</h6>
                             <h6 class="my-0">Modell: ${bil.modell}</h6>
                             <h6 class="my-0">Farge: ${bil.farge}</h6>
-                            <h6 class="my-0">Antall km: ${bil.km}</h6>
                             <h6 class="my-0">Registreringsnummer: ${bil.regnr}</h6>
+                            <h6 class="my-0">Utleiegruppe: ${bil.utleiegruppe}</h6>
                             <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 150px; object-fit: scale-down;">
-                            <small class="text-body-secondary">Brief description</small>
+                            <small class="text-body-secondary">Antall km: ${bil.km}</small>
                         </div>
-                        <span class="text-body-secondary">$12</span>
+                        <span class="text-body-secondary">Dagspris: 399kr</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Returgebyr</h6>
+                            <small class="text-body-secondary"></small>
+                        </div>
+                        <span class="text-body-secondary">80kr</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Forsikring</h6>
+                            <small class="text-body-secondary">*Kollisjonsbeskyttelse og tyveribeskyttelse</small>
+                        </div>
+                        <span class="text-body-secondary">120kr</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>200 kr</strong>
+                        <span>Totalt: </span>
+                        <strong>22</strong>
                     </li>
                 </ul>
             </div>
@@ -110,16 +129,16 @@
                         </div>
 
                         <div class="col-md-4">
-                            <label for="Poststed" class="form-label">Poststed</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required="">
+                            <label for="poststed" class="form-label">Poststed</label>
+                            <input type="text" class="form-control" id="poststed" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Please provide a valid state.
                             </div>
                         </div>
 
                         <div class="col-md-3">
-                            <label for="zip" class="form-label">Postnummer</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required="">
+                            <label for="postnummer" class="form-label">Postnummer</label>
+                            <input type="text" class="form-control" id="postnummer" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Zip code required.
                             </div>
