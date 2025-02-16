@@ -5,7 +5,7 @@
     <div class="col">
         <div class="card shadow-sm bilKort">
             <!-- Legge til bilder -->
-            <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 350px; object-fit: cover;">
+            <img src="${bil.bildeURL}" class="card-img-top" alt="${bil.merke} ${bil.modell}" style="height: 350px; object-fit: scale-down;">
             <div class="card-body">
                 <p class="card-text">
                     <strong>Merke:</strong> ${bil.merke}<br>
