@@ -193,7 +193,7 @@
 
                     <div class="row gy-3">
                         <div class="col-md-6">
-                            <label for="cc-name" class="form-label">Name on card</label>
+                            <label for="cc-name" class="form-label">Navn på kortholder</label>
                             <input type="text" class="form-control" id="cc-name"  placeholder="" required="">
                             <small class="text-body-secondary">Full name as displayed on card</small>
                             <div class="invalid-feedback">
@@ -202,7 +202,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="cc-number" class="form-label">Credit card number</label>
+                            <label for="cc-number" class="form-label">Kredittkort</label>
                             <input type="text" class="form-control" name="kredittkort" id="cc-number" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Credit card number is required
@@ -210,7 +210,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label for="cc-expiration" class="form-label">Expiration</label>
+                            <label for="cc-expiration" class="form-label">Utløpsdato/label>
                             <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Expiration date required
@@ -218,7 +218,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <label for="cc-cvv" class="form-label">CCV</label>
                             <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
                             <div class="invalid-feedback">
                                 Security code required
