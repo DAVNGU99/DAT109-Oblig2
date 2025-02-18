@@ -2,6 +2,10 @@ package com.example.dat109oblig2.Objekter;
 
 import java.time.LocalDate;
 
+/**
+ * Klasse som brukes til registrering av bestilling av utleie.
+ * @author Gruppe 29
+ */
 public class Utleiebestilling {
 
 	private String kredittkort;

@@ -2,6 +2,11 @@ package com.example.dat109oblig2.Objekter;
 
 import java.util.List;
 
+/**
+ * Klasse som representerer bilutleieselskapet med ein liste av alle kontorene til
+ * selskapet.
+ * @author Gruppe 29
+ */
 public class BilutleieSelskap {
 
 	private String navn;

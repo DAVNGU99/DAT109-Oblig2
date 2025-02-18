@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+/**
+ * Klasse for å hente inn bilene som er tilgjengelige frå eit valgt kontor.
+ * @author Gruppe 29
+ */
 @Controller
 public class VelgKontorOgBilController {
 

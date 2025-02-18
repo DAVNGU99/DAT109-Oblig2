@@ -2,6 +2,10 @@ package com.example.dat109oblig2.Objekter;
 
 import java.util.List;
 
+/**
+ * Klasse som oppretter og lister opp alle kontorene til selskapet.
+ * @author Gruppe 29
+ */
 public class Kontorliste {
 
 	public static List<Kontor> kontorliste = List.of(

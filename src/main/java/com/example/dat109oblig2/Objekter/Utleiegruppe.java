@@ -2,9 +2,19 @@ package com.example.dat109oblig2.Objekter;
 
 import java.math.BigDecimal;
 
+/**
+ * enum som brukes til å representere den gitte gruppe til ein bil, i tillegg til prisene
+ * for kvar gruppe.
+ * @author Gruppe 29
+ */
 public enum Utleiegruppe {
     A, B, C, D;
 
+	/**
+	 * Metode som returnerer prisen til this utleiegruppe basert på type.
+	 * @return BigDecimal
+	 * @author Gruppe 29
+	 */
     public BigDecimal dagsPris() {
         BigDecimal pris = null;
 

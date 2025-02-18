@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+/**
+ * Kontroller klasse for bestilling av bil. Her blir siden for bestillingen satt opp,
+ * og informasjonen til kunden skal legges inn.
+ * @author Gruppe 29
+ */
 
 @Controller
 public class BestillingController {
@@ -61,16 +66,6 @@ public class BestillingController {
 
             //Bil
 
-
-
-
-
-
-
-
-
-
-
             Model model){
 
         Kunde lagreKunde = new Kunde();
@@ -82,7 +77,6 @@ public class BestillingController {
         lagreKunde.setPostnummer(Integer.parseInt(postnummer));
 
         RegistrertKundeListe.kundeinformasjon.add(lagreKunde);
-
 
 
         Utleiebestilling bestilling = new Utleiebestilling();
@@ -102,13 +96,11 @@ public class BestillingController {
                 Billister.stavangerBiler
         ).stream().flatMap(List::stream).toList();
 
-
+        
         Bil valgtBil = alleBiler.stream()
                 .filter(bil -> bil.getRegnr().equalsIgnoreCase(regnr))
                 .findFirst()
                 .orElse(null);
-
-
 
 
         model.addAttribute("bestilling", bestilling);
@@ -116,11 +108,6 @@ public class BestillingController {
         model.addAttribute("kunde", lagreKunde);
 
         return "ordreBekreftelse";
-
-
-
-
-
     }
 
 }

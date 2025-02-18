@@ -2,6 +2,10 @@ package com.example.dat109oblig2.Objekter;
 
 import java.util.List;
 
+/**
+ * Klassse som representerer eit kontor med alle bilene som kontoret har på lager.
+ * @author Gruppe 29
+ */
 public class Kontor {
 
 	private int kontornr;

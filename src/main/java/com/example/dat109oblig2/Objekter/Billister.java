@@ -2,6 +2,11 @@ package com.example.dat109oblig2.Objekter;
 
 import java.util.List;
 
+/**
+ * Klasse med alle listene for bilene som skal finnes i dei forskjellge kontorene
+ * i landet. (siden ingen database..?)
+ * @author Gruppe 29
+ */
 public class Billister {
 
     public static List<Bil> osloBiler = List.of(

@@ -1,5 +1,9 @@
 package com.example.dat109oblig2.Objekter;
 
+/**
+ * Klasse for å representere ein bil (inkludert ein url til eit bilde av bilen)
+ * @author Gruppe 29
+ */
 public class Bil {
 	private String modell;
 	private String merke;
