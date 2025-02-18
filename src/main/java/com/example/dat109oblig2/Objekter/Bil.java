@@ -15,7 +15,6 @@ public class Bil {
 
 	private String bildeURL;
 
-	private int pris;
 
 	public String getBildeURL() {
 		return bildeURL;
@@ -80,26 +79,5 @@ public class Bil {
 		this.tilgjengelig = tilgjengelig;
 		this.bildeURL = bildeURL;
 	}
-
-	public Bil(String modell, String merke, Utleiegruppe utleiegruppe, String farge, String regnr, double km, Boolean tilgjengelig, String bildeURL, int pris) {
-		this.modell = modell;
-		this.merke = merke;
-		this.utleiegruppe = utleiegruppe;
-		this.farge = farge;
-		this.regnr = regnr;
-		this.km = km;
-		this.tilgjengelig = tilgjengelig;
-		this.bildeURL = bildeURL;
-		this.pris = pris;
-	}
-
-	public int getPris() {
-		return pris;
-	}
-
-	public void setPris(int pris) {
-		this.pris = pris;
-	}
-
 
 }
